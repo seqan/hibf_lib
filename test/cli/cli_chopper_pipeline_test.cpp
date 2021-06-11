@@ -62,33 +62,6 @@ TEST_F(cli_test, chopper_pipeline)
         fout << (expected_components | seqan3::views::join_with(std::string{'\n'}) | seqan3::views::to<std::string>);
     }
 
-    // CHOPPER PACK
-    // =========================================================================
-    seqan3::test::tmp_filename const binning_filename{"output.binning"};
-
-    cli_test_result pack_result = execute_app("chopper", "pack",
-                                              "-b", "2",
-                                              "-f", count_filename.get_path().c_str(),
-                                              "-o", binning_filename.get_path().c_str());
-
-    std::string expected_file
-    {
-        "#HIGH_LEVEL_IBF max_bin_id:1\n"
-        "#MERGED_BIN_1 max_bin_id:0\n"
-        "#FILES\tBIN_INDICES\tNUMBER_OF_BINS\tEST_MAX_TB_SIZES\n" +
-        seq_filename + "\t0\t1\t95\n" +
-        seq_filename + "\t1;0\t1;32\t190;3\n" +
-        seq_filename + ";" + seq_filename + "\t1;32\t1;32\t190;3\n"
-    };
-
-    ASSERT_TRUE(std::filesystem::exists(binning_filename.get_path()));
-
-    {
-        std::ifstream output_file{binning_filename.get_path()};
-        std::string const output_file_str((std::istreambuf_iterator<char>(output_file)), std::istreambuf_iterator<char>());
-        ASSERT_EQ(output_file_str, expected_file);
-    }
-
     // CHOPPER SPLIT
     // =========================================================================
     seqan3::test::tmp_filename const chopper_split_filename{"small.split"};
@@ -144,30 +117,4 @@ TEST_F(cli_test, chopper_pipeline)
     //     EXPECT_EQ(hibf[0].bin_count(), 2);
     //     EXPECT_EQ(hibf[1].bin_count(), 64);
     // }
-
-    // CHOPPER BUILD from pack
-    // =========================================================================
-    {
-        seqan3::test::tmp_filename output_path{"chopper.test.index"};
-
-        cli_test_result build_result = execute_app("chopper", "build",
-                                                   "--kmer-size", "15",
-                                                   "--false-positive-rate", "0.01",
-                                                   "-p", binning_filename.get_path().c_str(),
-                                                   "-o", output_path.get_path().c_str());
-
-        ASSERT_TRUE(std::filesystem::exists(output_path.get_path()));
-
-        std::vector<seqan3::interleaved_bloom_filter<>> hibf;
-
-        {
-            std::ifstream is(output_path.get_path(), std::ios::binary);
-            cereal::BinaryInputArchive archive(is);
-            archive(hibf);
-        }
-
-        ASSERT_EQ(hibf.size(), 2);
-        EXPECT_EQ(hibf[0].bin_count(), 2);
-        EXPECT_EQ(hibf[1].bin_count(), 64);
-    }
 }

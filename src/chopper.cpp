@@ -3,7 +3,6 @@
 
 #include <chopper/build/chopper_build.hpp>
 #include <chopper/count/chopper_count.hpp>
-#include <chopper/pack/chopper_pack.hpp>
 #include <chopper/split/chopper_split.hpp>
 #include <chopper/search/chopper_search.hpp>
 
@@ -27,8 +26,6 @@ int main(int argc, const char *argv [])
 
     if (sub_parser.info.app_name == std::string_view{"chopper-split"})
         return chopper_split(sub_parser);
-    else if (sub_parser.info.app_name == std::string_view{"chopper-pack"})
-        return chopper_pack(sub_parser);
     else if (sub_parser.info.app_name == std::string_view{"chopper-count"})
         return chopper_count(sub_parser);
     else if (sub_parser.info.app_name == std::string_view{"chopper-build"})
