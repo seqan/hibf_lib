@@ -58,12 +58,9 @@ inline void search(std::vector<std::pair<int32_t, uint32_t>> & membership_result
                    std::vector<size_t> const & kmers,
                    search_data const & data,
                    search_config const & config,
-                   int64_t const ibf_idx)
+                   int64_t const ibf_idx,
+                   size_t const threshold)
 {
-    size_t const kmer_lemma = (kmers.size() > (config.errors + 1) * config.k)
-                              ? kmers.size() - (config.errors + 1) * config.k
-                              : 0;
-
     auto counting_agent = data.hibf[ibf_idx].counting_agent<uint16_t>();
     auto const & result = counting_agent.bulk_count(kmers);
     assert(result.size() > 0);
@@ -78,23 +75,37 @@ inline void search(std::vector<std::pair<int32_t, uint32_t>> & membership_result
         if (current_filename_index < 0) // merged bin
         {
             // if threshold, next level
-            if (sum >= kmer_lemma)
-                search(membership_result, kmers, data, config, data.hibf_bin_levels[ibf_idx][bin]);
+            if (sum >= threshold)
+                search(membership_result, kmers, data, config, data.hibf_bin_levels[ibf_idx][bin], threshold);
             sum = 0;
         }
         else if (current_filename_index != data.user_bins.filename_index(ibf_idx, bin + 1)) // end of split bin
         {
             // if threshold, write
-            if (sum >= kmer_lemma)
+            if (sum >= threshold)
                 membership_result.emplace_back(ibf_idx, bin);
             sum = 0;
         }
     }
 
     // check the last bin
-    if (sum + result.back() >= kmer_lemma)
+    if (sum + result.back() >= threshold)
         if (auto bin =  result.size() - 1; data.user_bins.filename_index(ibf_idx, bin) < 0)
-            search(membership_result, kmers, data, config, data.hibf_bin_levels[ibf_idx][bin]);
+            search(membership_result, kmers, data, config, data.hibf_bin_levels[ibf_idx][bin], threshold);
         else
             membership_result.emplace_back(ibf_idx, bin);
+}
+
+// kmer_lemma as default threshold
+inline void search(std::vector<std::pair<int32_t, uint32_t>> & membership_result,
+                   std::vector<size_t> const & kmers,
+                   search_data const & data,
+                   search_config const & config,
+                   int64_t const ibf_idx)
+{
+    size_t const kmer_lemma = (kmers.size() > (config.errors + 1) * config.k)
+                              ? kmers.size() - (config.errors + 1) * config.k
+                              : 0;
+
+    search(membership_result, kmers, data, config, ibf_idx, kmer_lemma);
 }
