@@ -140,4 +140,3 @@ int chopper_search(seqan3::argument_parser & parser)
 
     return 0;
 }
-

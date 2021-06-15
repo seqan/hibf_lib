@@ -125,6 +125,15 @@ TEST_F(chopper_search_test, first_example)
 
         this->compare_result(result, {{0,1},{0,2},{0,5},{1,4},{1,5}});
     }
+
+    { // unspecific, threshold of 0.6
+        clear_and_compute_kmers(kmers, unspecific, config);
+        std::vector<std::pair<int32_t, uint32_t>> result{};
+
+        search(result, kmers, data, config, 0, 40); // start at top level ibf
+
+        this->compare_result(result, {{0,0},{0,1},{0,2},{0,5},{1,0},{1,1},{1,4},{1,5}});
+    }
 }
 
 TEST_F(chopper_search_test, multi_level_example)
