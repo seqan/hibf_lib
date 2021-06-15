@@ -4,7 +4,7 @@
 
 #include <robin_hood.h>
 
-#include <chopper/count/count_config.hpp>
+#include <hibf/count/count_config.hpp>
 
 inline auto read_data_file(count_config const & config)
 {

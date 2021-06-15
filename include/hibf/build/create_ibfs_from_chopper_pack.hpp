@@ -14,9 +14,9 @@
 #include <seqan3/search/views/kmer_hash.hpp>
 #include <seqan3/search/dream_index/interleaved_bloom_filter.hpp>
 
-#include <chopper/build/build_config.hpp>
-#include <chopper/build/compute_bin_size.hpp>
-#include <chopper/build/read_chopper_pack_file.hpp>
+#include <hibf/build/build_config.hpp>
+#include <hibf/build/compute_bin_size.hpp>
+#include <hibf/build/read_chopper_pack_file.hpp>
 
 struct file_traits : public seqan3::sequence_file_input_default_traits_dna
 {

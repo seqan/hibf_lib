@@ -6,11 +6,11 @@
 
 #include <seqan3/search/dream_index/interleaved_bloom_filter.hpp>
 
-#include <chopper/build/batch.hpp>
-#include <chopper/build/region.hpp>
-#include <chopper/detail_node_data.hpp>
-#include <chopper/detail_parse_chopper_pack_line.hpp>
-#include <chopper/detail_hibf_user_bins.hpp>
+#include <hibf/build/batch.hpp>
+#include <hibf/build/region.hpp>
+#include <hibf/detail_node_data.hpp>
+#include <hibf/detail_parse_chopper_pack_line.hpp>
+#include <hibf/detail_hibf_user_bins.hpp>
 
 template <typename record_type>
 struct build_data

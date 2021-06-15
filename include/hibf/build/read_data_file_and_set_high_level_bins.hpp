@@ -7,11 +7,11 @@
 
 #include <seqan3/std/charconv>
 
-#include <chopper/build/build_config.hpp>
-#include <chopper/build/build_data.hpp>
-#include <chopper/detail_bin_prefixes.hpp>
-#include <chopper/detail_parse_chopper_pack_line.hpp>
-#include <chopper/detail_starts_with.hpp>
+#include <hibf/build/build_config.hpp>
+#include <hibf/build/build_data.hpp>
+#include <hibf/detail_bin_prefixes.hpp>
+#include <hibf/detail_parse_chopper_pack_line.hpp>
+#include <hibf/detail_starts_with.hpp>
 
 inline auto read_data_file_and_set_high_level_bins(build_config const & config)
 {

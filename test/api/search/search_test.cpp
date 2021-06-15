@@ -2,12 +2,12 @@
 
 #include <fstream>
 
-#include <chopper/build/create_ibfs_from_chopper_pack.hpp>
-#include <chopper/search/chopper_search.hpp>
-#include <chopper/search/pair_hash.hpp>
-#include <chopper/search/search.hpp>
-#include <chopper/search/search_config.hpp>
-#include <chopper/search/search_data.hpp>
+#include <hibf/build/create_ibfs_from_chopper_pack.hpp>
+#include <hibf/search/chopper_search.hpp>
+#include <hibf/search/pair_hash.hpp>
+#include <hibf/search/search.hpp>
+#include <hibf/search/search_config.hpp>
+#include <hibf/search/search_data.hpp>
 
 #include "../api_test.hpp"
 

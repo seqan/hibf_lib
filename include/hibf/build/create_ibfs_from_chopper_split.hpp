@@ -15,11 +15,11 @@
 #include <seqan3/utility/views/slice.hpp>
 #include <seqan3/utility/views/zip.hpp>
 
-#include <chopper/build/batch.hpp>
-#include <chopper/build/build_config.hpp>
-#include <chopper/build/compute_bin_size.hpp>
-#include <chopper/build/read_chopper_split_file.hpp>
-#include <chopper/detail_bin_prefixes.hpp>
+#include <hibf/build/batch.hpp>
+#include <hibf/build/build_config.hpp>
+#include <hibf/build/compute_bin_size.hpp>
+#include <hibf/build/read_chopper_split_file.hpp>
+#include <hibf/detail_bin_prefixes.hpp>
 
 struct file_type_traits : public seqan3::sequence_file_input_default_traits_dna
 {

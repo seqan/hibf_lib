@@ -1,9 +1,9 @@
 #pragma once
 
-#include <chopper/search/pair_hash.hpp>
-#include <chopper/search/search_config.hpp>
-#include <chopper/search/search_data.hpp>
-#include <chopper/search/sync_out.hpp>
+#include <hibf/search/pair_hash.hpp>
+#include <hibf/search/search_config.hpp>
+#include <hibf/search/search_data.hpp>
+#include <hibf/search/sync_out.hpp>
 
 inline void clear_and_compute_kmers(std::vector<size_t> & kmers, seqan3::dna4_vector const & query, search_config const & config)
 {

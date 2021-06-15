@@ -8,9 +8,9 @@
 #include <vector>
 #include <seqan3/std/ranges>
 
-#include <chopper/build/build_data.hpp>
-#include <chopper/detail_parse_chopper_pack_header_line.hpp>
-#include <chopper/detail_parse_chopper_pack_line.hpp>
+#include <hibf/build/build_data.hpp>
+#include <hibf/detail_parse_chopper_pack_header_line.hpp>
+#include <hibf/detail_parse_chopper_pack_line.hpp>
 
 // data needs to be passed from outside sind the graph in data cannot be moved
 inline void read_chopper_pack_file(build_data<chopper_pack_record> & data, std::string const & chopper_pack_filename)

@@ -2,7 +2,7 @@
 
 #include <fstream>
 
-#include <chopper/detail_hibf_user_bins.hpp>
+#include <hibf/detail_hibf_user_bins.hpp>
 
 #include "../api_test.hpp"
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <chopper/build/build_config.hpp>
+#include <hibf/build/build_config.hpp>
 
 inline size_t compute_bin_size(build_config const & config, size_t const number_of_kmers_to_be_stored)
 {

@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include <chopper/build/read_chopper_split_file.hpp>
+#include <hibf/build/read_chopper_split_file.hpp>
 
 #include "../api_test.hpp"
 

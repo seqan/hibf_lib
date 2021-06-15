@@ -1,7 +1,7 @@
 #pragma once
 
 #include <seqan3/search/dream_index/interleaved_bloom_filter.hpp>
-#include <chopper/detail_hibf_user_bins.hpp>
+#include <hibf/detail_hibf_user_bins.hpp>
 
 struct search_data
 {

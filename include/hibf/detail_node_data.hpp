@@ -4,8 +4,8 @@
 
 #include <lemon/list_graph.h>
 
-#include <chopper/detail_parse_chopper_pack_line.hpp> // for chopper_pack_record
-#include <chopper/build/chopper_split_record.hpp>
+#include <hibf/detail_parse_chopper_pack_line.hpp> // for chopper_pack_record
+#include <hibf/build/chopper_split_record.hpp>
 
 template <typename record_type>
 struct node_data // rename:ibf_data? or ibf_node_data

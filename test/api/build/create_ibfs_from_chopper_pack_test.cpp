@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include <vector>
 
-#include <chopper/build/create_ibfs_from_chopper_pack.hpp>
+#include <hibf/build/create_ibfs_from_chopper_pack.hpp>
 
 #include "../api_test.hpp"
 

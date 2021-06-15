@@ -4,8 +4,8 @@
 #include <seqan3/std/charconv>
 #include <string>
 
-#include <chopper/build/build_data.hpp>
-#include <chopper/detail_bin_prefixes.hpp>
+#include <hibf/build/build_data.hpp>
+#include <hibf/detail_bin_prefixes.hpp>
 
 inline auto parse_bin_indices(std::string const & str)
 {
