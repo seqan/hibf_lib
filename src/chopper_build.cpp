@@ -5,9 +5,9 @@
 #include <seqan3/argument_parser/all.hpp>
 #include <seqan3/core/debug_stream.hpp>
 
-#include <chopper/build/build_config.hpp>
-#include <chopper/build/create_ibfs_from_chopper_pack.hpp>
-// #include <chopper/build/create_ibfs_from_chopper_split.hpp>
+#include <hibf/build/build_config.hpp>
+#include <hibf/build/create_ibfs_from_chopper_pack.hpp>
+// #include <hibf/build/create_ibfs_from_chopper_split.hpp>
 
 void initialize_argument_parser(seqan3::argument_parser & parser, build_config & config)
 {
@@ -83,4 +83,3 @@ int chopper_build(seqan3::argument_parser & parser)
 
     return 0;
 }
-

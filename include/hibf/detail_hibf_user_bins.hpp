@@ -12,7 +12,7 @@
 #include <seqan3/utility/views/join_with.hpp>
 #include <seqan3/utility/views/to.hpp>
 
-#include <chopper/search/sync_out.hpp>
+#include <hibf/search/sync_out.hpp>
 
 struct hibf_user_bins
 {

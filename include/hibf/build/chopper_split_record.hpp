@@ -7,7 +7,7 @@
 
 #include <seqan3/io/sequence_file/all.hpp>
 
-#include <chopper/build/region.hpp>
+#include <hibf/build/region.hpp>
 
 struct chopper_split_record
 {

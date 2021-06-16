@@ -6,7 +6,7 @@
 
 #include <seqan3/alphabet/nucleotide/dna4.hpp>
 
-#include <chopper/build/chopper_build.hpp>
+#include <hibf/build/chopper_build.hpp>
 
 #include "../api_test.hpp"
 

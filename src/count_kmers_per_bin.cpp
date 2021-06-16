@@ -12,7 +12,7 @@
 #include <seqan3/search/views/kmer_hash.hpp>
 #include <seqan3/utility/views/slice.hpp>
 
-#include <chopper/build/read_chopper_split_file.hpp>
+#include <hibf/build/read_chopper_split_file.hpp>
 
 struct cmd_arguments
 {

@@ -7,8 +7,8 @@
 
 #include <seqan3/utility/views/to.hpp>
 
-#include <chopper/detail_bin_prefixes.hpp>
-#include <chopper/detail_starts_with.hpp>
+#include <hibf/detail_bin_prefixes.hpp>
+#include <hibf/detail_starts_with.hpp>
 
 struct chopper_pack_record
 {

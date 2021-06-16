@@ -2,8 +2,8 @@
 
 #include <sstream>
 #include <vector>
-#include <chopper/count/count_config.hpp>
-#include <chopper/count/read_data_file.hpp>
+#include <hibf/count/count_config.hpp>
+#include <hibf/count/read_data_file.hpp>
 
 #include "../api_test.hpp"
 

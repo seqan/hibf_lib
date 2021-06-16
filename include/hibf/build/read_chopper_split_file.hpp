@@ -9,13 +9,13 @@
 
 #include <seqan3/std/charconv>
 
-#include <chopper/build/batch.hpp>
-#include <chopper/build/build_data.hpp>
-#include <chopper/build/region.hpp>
-#include <chopper/build/chopper_split_record.hpp>
-#include <chopper/detail_bin_prefixes.hpp>
-#include <chopper/detail_parse_chopper_pack_header_line.hpp>
-#include <chopper/detail_starts_with.hpp>
+#include <hibf/build/batch.hpp>
+#include <hibf/build/build_data.hpp>
+#include <hibf/build/region.hpp>
+#include <hibf/build/chopper_split_record.hpp>
+#include <hibf/detail_bin_prefixes.hpp>
+#include <hibf/detail_parse_chopper_pack_header_line.hpp>
+#include <hibf/detail_starts_with.hpp>
 
 inline auto parse_chopper_split_line(std::string const & line)
 {

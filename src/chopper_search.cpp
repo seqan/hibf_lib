@@ -10,10 +10,10 @@
 #include <seqan3/search/views/kmer_hash.hpp>
 #include <seqan3/utility/views/interleave.hpp>
 
-#include <chopper/search/search.hpp>
-#include <chopper/search/search_config.hpp>
-#include <chopper/search/search_data.hpp>
-#include <chopper/search/sync_out.hpp>
+#include <hibf/search/search.hpp>
+#include <hibf/search/search_config.hpp>
+#include <hibf/search/search_data.hpp>
+#include <hibf/search/sync_out.hpp>
 
 void initialize_argument_parser(seqan3::argument_parser & parser, search_config & config)
 {

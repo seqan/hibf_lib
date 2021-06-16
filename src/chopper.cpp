@@ -1,9 +1,9 @@
 #include <seqan3/argument_parser/all.hpp>
 #include <seqan3/core/debug_stream.hpp>
 
-#include <chopper/build/chopper_build.hpp>
-#include <chopper/count/chopper_count.hpp>
-#include <chopper/search/chopper_search.hpp>
+#include <hibf/build/chopper_build.hpp>
+#include <hibf/count/chopper_count.hpp>
+#include <hibf/search/chopper_search.hpp>
 
 int main(int argc, const char *argv [])
 {

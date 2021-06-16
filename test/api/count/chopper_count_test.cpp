@@ -4,8 +4,8 @@
 #include <unordered_map>
 #include <vector>
 
-#include <chopper/count/count_config.hpp>
-#include <chopper/count/chopper_count.hpp>
+#include <hibf/count/count_config.hpp>
+#include <hibf/count/chopper_count.hpp>
 
 #include "../api_test.hpp"
 

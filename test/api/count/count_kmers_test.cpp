@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
-#include <chopper/count/count_config.hpp>
-#include <chopper/count/count_kmers.hpp>
+#include <hibf/count/count_config.hpp>
+#include <hibf/count/count_kmers.hpp>
 
 #include "../api_test.hpp"
 

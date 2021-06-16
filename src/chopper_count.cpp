@@ -1,9 +1,9 @@
 #include <seqan3/argument_parser/all.hpp>
 #include <seqan3/core/debug_stream.hpp>
 
-#include <chopper/count/count_config.hpp>
-#include <chopper/count/count_kmers.hpp>
-#include <chopper/count/read_data_file.hpp>
+#include <hibf/count/count_config.hpp>
+#include <hibf/count/count_kmers.hpp>
+#include <hibf/count/read_data_file.hpp>
 
 void initialize_argument_parser(seqan3::argument_parser & parser, count_config & config)
 {
@@ -43,4 +43,3 @@ int chopper_count(seqan3::argument_parser & parser)
 
     return 0;
 }
-

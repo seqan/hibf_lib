@@ -6,7 +6,7 @@
 
 #include <lemon/graph_to_eps.h>
 
-#include <chopper/detail_parse_chopper_pack_header_line.hpp>
+#include <hibf/detail_parse_chopper_pack_header_line.hpp>
 
 #include "../api_test.hpp"
 
