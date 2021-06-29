@@ -13,20 +13,11 @@ target_include_directories (chopper_interface INTERFACE "${SEQAN_INCLUDE_DIRS}")
 add_library (chopper_build_lib STATIC chopper_build.cpp)
 target_link_libraries (chopper_build_lib "chopper_interface")
 
-add_library (chopper_count_lib STATIC chopper_count.cpp)
-target_link_libraries (chopper_count_lib "chopper_interface")
-
 add_library (chopper_search_lib STATIC chopper_search.cpp)
 target_link_libraries (chopper_search_lib "chopper_interface")
 
 add_library (chopper_lib INTERFACE)
-target_link_libraries (chopper_lib INTERFACE "chopper_interface" "chopper_build_lib" "chopper_count_lib" "chopper_search_lib")
+target_link_libraries (chopper_lib INTERFACE "chopper_interface" "chopper_build_lib" "chopper_search_lib")
 
 add_executable (chopper chopper.cpp)
 target_link_libraries (chopper "chopper_lib")
-
-# add_executable (count_kmers_per_bin count_kmers_per_bin.cpp)
-# target_link_libraries (count_kmers_per_bin "chopper_interface")
-
-# add_executable (count_HIBF_kmers_based_on_binning count_HIBF_kmers_based_on_binning.cpp)
-# target_link_libraries (count_HIBF_kmers_based_on_binning "chopper_interface")
