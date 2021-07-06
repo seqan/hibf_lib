@@ -15,6 +15,9 @@
 
 using seqan3::operator""_dna4;
 
+namespace hibf
+{
+
 struct chopper_search_test : public ::testing::Test
 {
     bool is_unique_range(std::vector<std::pair<int32_t, uint32_t>> v)
@@ -391,3 +394,4 @@ TEST_F(chopper_search_test, multi_level_example)
 
     EXPECT_EQ(string_from_file(output_filename.get_path()), expected);
 }
+} // namespace hibf

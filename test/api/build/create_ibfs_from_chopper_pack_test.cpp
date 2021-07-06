@@ -10,6 +10,9 @@
 
 using seqan3::operator""_dna4;
 
+namespace hibf
+{
+
 struct create_ibfs_from_chopper_pack_test : public ::testing::Test
 {
     auto & count_kmers(typename seqan3::interleaved_bloom_filter<>::counting_agent_type<size_t> & ibf_agent,
@@ -578,3 +581,4 @@ TEST_F(create_ibfs_from_chopper_pack_test, multi_level_ibf)
     compare_counts(data.hibf[4], seq3_specific, {{2}}, config);
     compare_counts(data.hibf[5], seq3_specific, {}, config);
 }
+} // namespace hibf

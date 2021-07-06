@@ -4,6 +4,9 @@
 
 #include "../api_test.hpp"
 
+namespace hibf
+{
+
 TEST(read_chopper_pack_file_test, small_example)
 {
     seqan3::test::tmp_filename chopper_split_filename{"test.split"};
@@ -102,3 +105,4 @@ TEST(read_chopper_pack_file_test, small_example)
         EXPECT_EQ(nd_data, expected_node_data[i]);
     }
 }
+} // namespace hibf

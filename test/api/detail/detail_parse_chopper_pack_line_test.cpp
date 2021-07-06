@@ -4,6 +4,9 @@
 
 #include "../api_test.hpp"
 
+namespace hibf
+{
+
 TEST(chopper_pack_record_test, euality_operator)
 {
     chopper_pack_record r1{{"file7"}, {0, 1}, {1, 2}, {500, 20}};
@@ -60,3 +63,4 @@ TEST(parse_chopper_pack_line_test, high_level_data_file)
         EXPECT_RANGE_EQ(record.estimated_sizes, expected_estimated_sizes[i]);
     }
 }
+} // namespace hibf

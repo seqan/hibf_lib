@@ -10,6 +10,9 @@
 
 #include "../api_test.hpp"
 
+namespace hibf
+{
+
 template <typename record_type>
 void write_graph(lemon::ListDigraph const & g,
                  lemon::ListDigraph::NodeMap<node_data<record_type>> const & node_map,
@@ -84,3 +87,4 @@ TEST(parse_chopper_pack_header_test, foo)
     seqan3::test::tmp_filename dot_file{"header_graph.dot"};
     write_graph(g, node_map, dot_file.get_path().c_str());
 }
+} // namespace hibf

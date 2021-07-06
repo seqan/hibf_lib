@@ -12,6 +12,9 @@
 
 using seqan3::operator""_dna4;
 
+namespace hibf
+{
+
 // TEST(chopper_build_test, chopper_split_file)
 // {
 //     std::string input_filename1 = data("small.fa");
@@ -186,3 +189,4 @@ TEST(chopper_build_test, chopper_pack_file)
 //     EXPECT_TRUE(std::filesystem::exists(output_prefix.get_path().string() + "high_level.ibf"));
 //     EXPECT_TRUE(std::filesystem::exists(output_prefix.get_path().string() + "low_level_6.ibf"));
 // }
+} // namespace hibf
