@@ -15,6 +15,9 @@
 #include <hibf/search/search_data.hpp>
 #include <hibf/search/sync_out.hpp>
 
+namespace hibf
+{
+
 void initialize_argument_parser(seqan3::argument_parser & parser, search_config & config)
 {
     parser.info.author = "Avenja";
@@ -140,3 +143,4 @@ int chopper_search(seqan3::argument_parser & parser)
 
     return 0;
 }
+} // namespace hibf

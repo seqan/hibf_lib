@@ -2,6 +2,9 @@
 
 #include <hibf/build/build_config.hpp>
 
+namespace hibf
+{
+
 inline size_t compute_bin_size(build_config const & config, size_t const number_of_kmers_to_be_stored)
 {
     return std::ceil( - static_cast<double>(number_of_kmers_to_be_stored * config.hash_funs) /
@@ -16,3 +19,4 @@ inline size_t compute_bin_size(build_config const & config, size_t const number_
 // -NUM_ELEMS*HASHES
 // -----------------------
 // LN(1 - e^(LN(FPR) / HASHES) )
+} // namespace hibf

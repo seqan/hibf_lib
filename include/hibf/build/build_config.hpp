@@ -1,5 +1,8 @@
 #pragma once
 
+namespace hibf
+{
+
 struct build_config
 {
     std::string chopper_split_filename{};
@@ -15,3 +18,4 @@ struct build_config
     uint8_t k{25};
     uint16_t overlap{200}; // overlap when inserting sequence regions into the IBF
 };
+} // namespace hibf

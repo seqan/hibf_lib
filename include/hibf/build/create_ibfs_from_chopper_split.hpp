@@ -21,6 +21,8 @@
 #include <hibf/build/read_chopper_split_file.hpp>
 #include <hibf/detail_bin_prefixes.hpp>
 
+namespace hibf
+{
 struct file_type_traits : public seqan3::sequence_file_input_default_traits_dna
 {
     using sequence_alphabet = seqan3::dna4;
@@ -283,3 +285,4 @@ inline void create_ibfs_from_chopper_split(build_data<chopper_split_record> & da
 }
 
 #endif
+} // namespace hibf

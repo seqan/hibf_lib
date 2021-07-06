@@ -3,6 +3,9 @@
 #include <string>
 #include <vector>
 
+namespace hibf
+{
+
 struct batch
 {
     std::vector<std::string> filenames{};
@@ -33,3 +36,4 @@ inline std::ostream & operator<<(std::ostream & s, batch const & b)
 
     return s;
 }
+} // namespace hibf

@@ -9,6 +9,9 @@
 
 #include <hibf/build/region.hpp>
 
+namespace hibf
+{
+
 struct chopper_split_record
 {
     std::vector<std::string> filenames{};
@@ -110,3 +113,4 @@ inline std::ostream & operator<<(std::ostream & s, chopper_split_record const & 
 
       return s;
 }
+} // namespace hibf

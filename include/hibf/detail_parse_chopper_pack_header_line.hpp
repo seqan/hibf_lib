@@ -7,6 +7,9 @@
 #include <hibf/build/build_data.hpp>
 #include <hibf/detail_bin_prefixes.hpp>
 
+namespace hibf
+{
+
 inline auto parse_bin_indices(std::string const & str)
 {
     std::vector<size_t> result;
@@ -99,3 +102,4 @@ size_t parse_chopper_pack_header(lemon::ListDigraph & ibf_graph,
 
     return header_records.size();
 }
+} // namespace hibf

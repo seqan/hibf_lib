@@ -1,5 +1,8 @@
 #pragma once
 
+namespace hibf
+{
+
 struct region
 {
     size_t bin_index{};
@@ -23,3 +26,4 @@ inline std::ostream & operator<<(std::ostream & s, region const & r)
 
     return s;
 }
+} // namespace hibf

@@ -10,6 +10,9 @@
 #include <hibf/detail_bin_prefixes.hpp>
 #include <hibf/detail_starts_with.hpp>
 
+namespace hibf
+{
+
 struct chopper_pack_record
 {
     std::vector<std::string> filenames{};
@@ -94,3 +97,4 @@ inline auto parse_chopper_pack_line(std::string const & current_line)
 
     return result;
 }
+} // namespace hibf
