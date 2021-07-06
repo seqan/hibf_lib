@@ -4,6 +4,9 @@
 #include <hibf/build/chopper_build.hpp>
 #include <hibf/search/chopper_search.hpp>
 
+namespace hibf
+{
+
 int main(int argc, const char *argv [])
 {
     seqan3::argument_parser top_level_parser{"chopper", argc, argv, seqan3::update_notifications::off,
@@ -29,3 +32,4 @@ int main(int argc, const char *argv [])
 
     return 0;
 }
+} // namespace hibf
