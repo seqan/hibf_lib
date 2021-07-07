@@ -4,9 +4,6 @@
 #include <hibf/build/chopper_build.hpp>
 #include <hibf/search/chopper_search.hpp>
 
-namespace hibf
-{
-
 int main(int argc, const char *argv [])
 {
     seqan3::argument_parser top_level_parser{"chopper", argc, argv, seqan3::update_notifications::off,
@@ -26,10 +23,9 @@ int main(int argc, const char *argv [])
     seqan3::argument_parser & sub_parser = top_level_parser.get_sub_parser(); // hold a reference to the sub_parser
 
     if (sub_parser.info.app_name == std::string_view{"chopper-build"})
-        return chopper_build(sub_parser);
+        return hibf::chopper_build(sub_parser);
     else if (sub_parser.info.app_name == std::string_view{"chopper-search"})
-        return chopper_search(sub_parser);
+        return hibf::chopper_search(sub_parser);
 
     return 0;
 }
-} // namespace hibf

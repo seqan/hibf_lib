@@ -5,9 +5,6 @@
 
 #include "fastq_conversion.hpp"
 
-namespace hibf
-{
-
 int main(int argc, char ** argv)
 {
     seqan3::argument_parser parser{"Fastq-to-Fasta-Converter", argc, argv};
@@ -44,4 +41,4 @@ int main(int argc, char ** argv)
 
 
     return 0;
-} // namespace hibf
+}
