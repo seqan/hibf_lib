@@ -78,4 +78,5 @@ inline void read_chopper_pack_file(build_data<chopper_pack_record> & data, std::
     data.number_of_user_bins = user_bins;
     data.resize();
 };
+
 } // namespace hibf

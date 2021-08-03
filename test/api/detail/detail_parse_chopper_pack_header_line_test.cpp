@@ -87,4 +87,5 @@ TEST(parse_chopper_pack_header_test, foo)
     seqan3::test::tmp_filename dot_file{"header_graph.dot"};
     write_graph(g, node_map, dot_file.get_path().c_str());
 }
+
 } // namespace hibf

@@ -97,4 +97,5 @@ inline auto parse_chopper_pack_line(std::string const & current_line)
 
     return result;
 }
+
 } // namespace hibf

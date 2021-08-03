@@ -159,4 +159,5 @@ inline void read_chopper_split_file(build_data<chopper_split_record> & data, std
         current_data.number_of_technical_bins = std::max(current_data.number_of_technical_bins, bin + 1);
     }
 };
+
 } // namespace hibf

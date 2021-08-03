@@ -86,4 +86,5 @@ int chopper_build(seqan3::argument_parser & parser)
 
     return 0;
 }
+
 } // namespace hibf

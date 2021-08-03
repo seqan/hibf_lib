@@ -111,4 +111,5 @@ inline void search(std::vector<std::pair<int32_t, uint32_t>> & membership_result
 
     search(membership_result, kmers, data, config, ibf_idx, kmer_lemma);
 }
+
 } // namespace hibf

@@ -322,4 +322,5 @@ TEST(read_chopper_split_file_test, small_example)
 //     EXPECT_EQ(data.hibf_max_batch_record, &batches[1]);
 //     EXPECT_EQ(*data.hibf_max_batch_record, (batch{{seq_filename}, {0, 1, 2}, 0}));
 // }
+
 } // namespace hibf

@@ -286,4 +286,5 @@ inline void create_ibfs_from_chopper_pack(build_data<chopper_pack_record> & data
 
     build(dummy, root, data, config);
 }
+
 } // namespace hibf

@@ -11,4 +11,5 @@ struct search_data
     std::vector<std::vector<int64_t>> hibf_bin_levels;
     hibf_user_bins user_bins;
 };
+
 } // namespace hibf

@@ -94,4 +94,5 @@ public:
 };
 
 // CEREAL_CLASS_VERSION(hibf_user_bins, 1);
+
 } // namespace hibf

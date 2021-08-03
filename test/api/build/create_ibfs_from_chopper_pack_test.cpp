@@ -581,4 +581,5 @@ TEST_F(create_ibfs_from_chopper_pack_test, multi_level_ibf)
     compare_counts(data.hibf[4], seq3_specific, {{2}}, config);
     compare_counts(data.hibf[5], seq3_specific, {}, config);
 }
+
 } // namespace hibf

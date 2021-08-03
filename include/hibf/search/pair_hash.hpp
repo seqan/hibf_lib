@@ -11,4 +11,5 @@ struct pair_hash
         return (static_cast<size_t>(pair.first) << 32) | static_cast<size_t>(pair.second);
     }
 };
+
 } // namespace hibf

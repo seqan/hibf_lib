@@ -83,4 +83,5 @@ inline std::ostream & operator<<(std::ostream & s, node_data<chopper_split_recor
 
     return s;
 }
+
 } // namespace hibf

@@ -54,4 +54,5 @@ struct build_data
 
     hibf_user_bins user_bins;
 };
+
 } // namespace hibf

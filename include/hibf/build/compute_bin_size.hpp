@@ -19,4 +19,5 @@ inline size_t compute_bin_size(build_config const & config, size_t const number_
 // -NUM_ELEMS*HASHES
 // -----------------------
 // LN(1 - e^(LN(FPR) / HASHES) )
+
 } // namespace hibf

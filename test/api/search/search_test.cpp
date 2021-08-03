@@ -314,4 +314,5 @@ TEST_F(chopper_search_test, multi_level_example)
         });
     }
 }
+
 } // namespace hibf

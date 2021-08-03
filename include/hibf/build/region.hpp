@@ -26,4 +26,5 @@ inline std::ostream & operator<<(std::ostream & s, region const & r)
 
     return s;
 }
+
 } // namespace hibf

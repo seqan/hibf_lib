@@ -105,4 +105,5 @@ TEST(read_chopper_pack_file_test, small_example)
         EXPECT_EQ(nd_data, expected_node_data[i]);
     }
 }
+
 } // namespace hibf

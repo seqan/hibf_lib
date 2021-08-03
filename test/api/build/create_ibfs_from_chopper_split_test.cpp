@@ -353,4 +353,5 @@ TEST(create_ibfs_from_chopper_split_test, small_example)
 //         EXPECT_EQ(high_level_ibf.bin_size(), 114226);
 //     }
 // }
+
 } // namespace hibf

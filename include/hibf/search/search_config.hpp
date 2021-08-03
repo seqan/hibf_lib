@@ -14,4 +14,5 @@ struct search_config
     bool verbose{false};
     bool write_time{false};
 };
+
 } // namespace hibf

@@ -394,4 +394,5 @@ TEST_F(chopper_search_test, multi_level_example)
 
     EXPECT_EQ(string_from_file(output_filename.get_path()), expected);
 }
+
 } // namespace hibf

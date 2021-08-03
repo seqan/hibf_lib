@@ -102,4 +102,5 @@ size_t parse_chopper_pack_header(lemon::ListDigraph & ibf_graph,
 
     return header_records.size();
 }
+
 } // namespace hibf

@@ -113,4 +113,5 @@ inline std::ostream & operator<<(std::ostream & s, chopper_split_record const & 
 
       return s;
 }
+
 } // namespace hibf

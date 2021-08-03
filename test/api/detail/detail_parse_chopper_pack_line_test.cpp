@@ -63,4 +63,5 @@ TEST(parse_chopper_pack_line_test, high_level_data_file)
         EXPECT_RANGE_EQ(record.estimated_sizes, expected_estimated_sizes[i]);
     }
 }
+
 } // namespace hibf

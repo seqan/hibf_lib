@@ -31,4 +31,5 @@ private:
     std::ofstream file;
     std::mutex write_mutex;
 };
+
 } // namespace hibf

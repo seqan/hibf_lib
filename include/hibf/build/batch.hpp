@@ -36,4 +36,5 @@ inline std::ostream & operator<<(std::ostream & s, batch const & b)
 
     return s;
 }
+
 } // namespace hibf

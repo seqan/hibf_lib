@@ -13,4 +13,5 @@ inline bool starts_with(std::string const & target, std::string_view const & que
         ++index;
     return index == query.size();
 }
+
 } // namespace hibf
