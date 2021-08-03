@@ -5,6 +5,8 @@
 #include <hibf/search/search_data.hpp>
 #include <hibf/search/sync_out.hpp>
 
+namespace hibf
+{
 inline void clear_and_compute_kmers(std::vector<size_t> & kmers, seqan3::dna4_vector const & query, search_config const & config)
 {
     kmers.clear();
@@ -109,3 +111,5 @@ inline void search(std::vector<std::pair<int32_t, uint32_t>> & membership_result
 
     search(membership_result, kmers, data, config, ibf_idx, kmer_lemma);
 }
+
+} // namespace hibf

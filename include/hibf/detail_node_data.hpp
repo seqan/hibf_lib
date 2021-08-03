@@ -7,6 +7,9 @@
 #include <hibf/detail_parse_chopper_pack_line.hpp> // for chopper_pack_record
 #include <hibf/build/chopper_split_record.hpp>
 
+namespace hibf
+{
+
 template <typename record_type>
 struct node_data // rename:ibf_data? or ibf_node_data
 {
@@ -80,3 +83,5 @@ inline std::ostream & operator<<(std::ostream & s, node_data<chopper_split_recor
 
     return s;
 }
+
+} // namespace hibf

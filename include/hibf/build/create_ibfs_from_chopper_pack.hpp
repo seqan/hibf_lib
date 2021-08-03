@@ -18,6 +18,9 @@
 #include <hibf/build/compute_bin_size.hpp>
 #include <hibf/build/read_chopper_pack_file.hpp>
 
+namespace hibf
+{
+
 struct file_traits : public seqan3::sequence_file_input_default_traits_dna
 {
     using sequence_alphabet = seqan3::dna4;
@@ -283,3 +286,5 @@ inline void create_ibfs_from_chopper_pack(build_data<chopper_pack_record> & data
 
     build(dummy, root, data, config);
 }
+
+} // namespace hibf

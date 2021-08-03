@@ -10,6 +10,9 @@
 
 using seqan3::operator""_dna4;
 
+namespace hibf
+{
+
 TEST(create_ibfs_from_chopper_split_test, small_example)
 {
     std::string input_filename1 = data("small.fa");
@@ -350,3 +353,5 @@ TEST(create_ibfs_from_chopper_split_test, small_example)
 //         EXPECT_EQ(high_level_ibf.bin_size(), 114226);
 //     }
 // }
+
+} // namespace hibf

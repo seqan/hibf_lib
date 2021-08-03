@@ -9,6 +9,9 @@
 #include <hibf/build/create_ibfs_from_chopper_pack.hpp>
 // #include <hibf/build/create_ibfs_from_chopper_split.hpp>
 
+namespace hibf
+{
+
 void initialize_argument_parser(seqan3::argument_parser & parser, build_config & config)
 {
     parser.info.author = "Avenja";
@@ -83,3 +86,5 @@ int chopper_build(seqan3::argument_parser & parser)
 
     return 0;
 }
+
+} // namespace hibf

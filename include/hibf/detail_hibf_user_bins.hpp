@@ -14,6 +14,9 @@
 
 #include <hibf/search/sync_out.hpp>
 
+namespace hibf
+{
+
 struct hibf_user_bins
 {
 private:
@@ -91,3 +94,5 @@ public:
 };
 
 // CEREAL_CLASS_VERSION(hibf_user_bins, 1);
+
+} // namespace hibf

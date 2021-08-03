@@ -17,6 +17,9 @@
 #include <hibf/detail_parse_chopper_pack_header_line.hpp>
 #include <hibf/detail_starts_with.hpp>
 
+namespace hibf
+{
+
 inline auto parse_chopper_split_line(std::string const & line)
 {
     char const * buffer = line.c_str();
@@ -156,3 +159,5 @@ inline void read_chopper_split_file(build_data<chopper_split_record> & data, std
         current_data.number_of_technical_bins = std::max(current_data.number_of_technical_bins, bin + 1);
     }
 };
+
+} // namespace hibf

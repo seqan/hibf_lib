@@ -6,6 +6,8 @@
 
 #include "../api_test.hpp"
 
+namespace hibf
+{
 
 TEST(hibf_user_bins_test, access_vector)
 {
@@ -57,3 +59,5 @@ TEST(hibf_user_bins_test, cerealize)
     EXPECT_RANGE_EQ(read_user_bins[0], (std::vector<std::string>{"foo;bar", "foo;bar", "bar"}));
     EXPECT_RANGE_EQ(read_user_bins[1], (std::vector<std::string>{"", "foo;bar", "bar"}));
 }
+
+} // namespace hibf

@@ -12,6 +12,9 @@
 #include <hibf/detail_parse_chopper_pack_line.hpp>
 #include <hibf/detail_hibf_user_bins.hpp>
 
+namespace hibf
+{
+
 template <typename record_type>
 struct build_data
 {
@@ -51,3 +54,5 @@ struct build_data
 
     hibf_user_bins user_bins;
 };
+
+} // namespace hibf

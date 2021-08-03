@@ -13,6 +13,9 @@
 #include <hibf/detail_parse_chopper_pack_line.hpp>
 #include <hibf/detail_starts_with.hpp>
 
+namespace hibf
+{
+
 inline auto read_data_file_and_set_high_level_bins(build_config const & config)
 {
     build_data header;
@@ -89,3 +92,5 @@ inline auto read_data_file_and_set_high_level_bins(build_config const & config)
     header.hibf_max_record = &records[record_idx]; // only take a pointer now s.t. it is not invalidated by push_backs
     return std::make_pair(std::move(header), std::move(records));
 };
+
+} // namespace hibf

@@ -12,6 +12,9 @@
 #include <hibf/detail_parse_chopper_pack_header_line.hpp>
 #include <hibf/detail_parse_chopper_pack_line.hpp>
 
+namespace hibf
+{
+
 // data needs to be passed from outside sind the graph in data cannot be moved
 inline void read_chopper_pack_file(build_data<chopper_pack_record> & data, std::string const & chopper_pack_filename)
 {
@@ -75,3 +78,5 @@ inline void read_chopper_pack_file(build_data<chopper_pack_record> & data, std::
     data.number_of_user_bins = user_bins;
     data.resize();
 };
+
+} // namespace hibf

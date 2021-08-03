@@ -5,6 +5,9 @@
 
 #include <seqan3/std/filesystem>
 
+namespace hibf
+{
+
 class sync_out
 {
 public:
@@ -28,3 +31,5 @@ private:
     std::ofstream file;
     std::mutex write_mutex;
 };
+
+} // namespace hibf

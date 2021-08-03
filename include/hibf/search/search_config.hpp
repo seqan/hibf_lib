@@ -1,5 +1,7 @@
 #pragma once
 
+namespace hibf
+{
 struct search_config
 {
     std::string chopper_index_filename{};
@@ -12,3 +14,5 @@ struct search_config
     bool verbose{false};
     bool write_time{false};
 };
+
+} // namespace hibf
