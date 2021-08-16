@@ -16,8 +16,8 @@ target_link_libraries (chopper_build_lib "chopper_interface")
 add_library (chopper_search_lib STATIC chopper_search.cpp)
 target_link_libraries (chopper_search_lib "chopper_interface")
 
-add_library (chopper_lib INTERFACE)
-target_link_libraries (chopper_lib INTERFACE "chopper_interface" "chopper_build_lib" "chopper_search_lib")
+add_library (${PROJECT_NAME}_lib INTERFACE)
+target_link_libraries (${PROJECT_NAME}_lib INTERFACE "chopper_interface" "chopper_build_lib" "chopper_search_lib")
 
-add_executable (chopper chopper.cpp)
-target_link_libraries (chopper "chopper_lib")
+add_executable (${PROJECT_NAME} chopper.cpp)
+target_link_libraries (${PROJECT_NAME} "${PROJECT_NAME}_lib")
